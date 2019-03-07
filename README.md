@@ -170,6 +170,8 @@ error.table
 
 ggplot(error.table,aes(kvalue,error))+geom_line(colour="blue")
 
+![kvalue analysis](https://user-images.githubusercontent.com/43170364/53951908-8db31600-40f5-11e9-996e-e3abf64fd310.png)
+
  
 ### Using K=10 nearest neighbours for prediction 
 
