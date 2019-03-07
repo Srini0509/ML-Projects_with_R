@@ -16,11 +16,11 @@ library(gridExtra)
 
 dim(iris)
 
-[1] 150   5
+  [1] 150   5
 
 names(iris)
 
-[1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"    
+  [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"    
 
 attach(iris)
 
@@ -68,19 +68,14 @@ pre_train<- subset(iris,split==T)
 
 pre_test<- subset(iris,split==F) 
 
-### Scale is used for standardisation (z-scoring) when there is variance in predictors
-
-train.ir<- scale(pre_train[,-5])
-
-test.ir<- scale(pre_test[,-5])
 
 dim(train.ir)
 
-[1] 114   4
+    [1] 114    4
 
 dim(test.ir)
 
-[1] 36  4
+    [1] 36    4
 
 ### Applying KNN algorithm for identifying Species classification 
 #### Choosing correct K value using the loop, funtion & plot 
@@ -101,53 +96,53 @@ error[i]<- mean(pre_test$Species!=species.pred)
 
 print(error)
 
-[1] 0.13888889 0.13888889 0.08333333 0.08333333 0.05555556 0.05555556 0.05555556 0.05555556
+     [1] 0.13888889 0.13888889 0.08333333 0.08333333 0.05555556 0.05555556 0.05555556 0.05555556
 
-[9] 0.05555556 0.02777778 0.05555556 0.05555556 0.05555556 0.02777778 0.02777778 0.02777778
+     [9] 0.05555556 0.02777778 0.05555556 0.05555556 0.05555556 0.02777778 0.02777778 0.02777778
 
-[17] 0.05555556 0.05555556 0.05555556 0.05555556
+    [17] 0.05555556 0.05555556 0.05555556 0.05555556
 
 spe.comp<- data.frame(pre_test$Species,species.pred)
 
 spe.comp
    
-##### pre_test.Species   &   species.pred:
-   1            setosa       setosa
-   2            setosa       setosa
-   3            setosa       setosa
-   4            setosa       setosa
-   5            setosa       setosa
-   6            setosa       setosa
-   7            setosa       setosa
-   8            setosa       setosa
-9            setosa       setosa
-10           setosa       setosa
-11           setosa       setosa
-12           setosa       setosa
-13       versicolor   versicolor
-14       versicolor         versicolor
-15       versicolor         versicolor
-16       versicolor         versicolor
-17       versicolor         versicolor
-18       versicolor         versicolor
-19       versicolor         versicolor
-20       versicolor         versicolor
-21       versicolor         versicolor
-22       versicolor         versicolor
-23       versicolor         versicolor
-24       versicolor         versicolor
-25        virginica          virginica
-26        virginica          virginica
-27        virginica          versicolor (Misclassified data)     
-28        virginica          virginica
-29        virginica          virginica
-30        virginica          virginica
-31        virginica          virginica
-32        virginica          virginica
-33        virginica          virginica
-34        virginica          virginica
-35        virginica          virginica
-36        virginica          virginica
+#####     pre_test.Species   &   species.pred:
+       1            setosa       setosa
+       2            setosa       setosa
+       3            setosa       setosa
+       4            setosa       setosa
+       5            setosa       setosa
+       6            setosa       setosa
+       7            setosa       setosa
+       8            setosa       setosa
+       9            setosa       setosa
+       10           setosa       setosa
+       11           setosa       setosa
+       12           setosa       setosa
+       13       versicolor   versicolor
+       14       versicolor   versicolor
+       15       versicolor   versicolor
+       16       versicolor   versicolor
+       17       versicolor   versicolor
+       18       versicolor   versicolor
+       19       versicolor   versicolor
+       20       versicolor   versicolor
+       21       versicolor   versicolor
+       22       versicolor   versicolor
+       23       versicolor   versicolor
+       24       versicolor   versicolor
+       25        virginica    virginica
+       26        virginica    virginica
+       27        virginica   versicolor  (misclassified data)
+       28        virginica    virginica
+       29        virginica    virginica
+       30        virginica    virginica
+       31        virginica    virginica
+       32        virginica    virginica
+       33        virginica    virginica
+       34        virginica    virginica
+       35        virginica    virginica
+       36        virginica    virginica
 
 kvalue<- 1:20
 
@@ -190,6 +185,10 @@ misclass_count<- 36*E1
 
 misclass_count
 
-[1] 1
+    [1] 1
 
-## The error rate is low of value 0.027. One misclassified data out of 36 test observations found
+misclass_count/36
+     
+    [1] 0.02777778
+
+### The error rate is low of value 0.027. One misclassified data out of 36 test observations found
