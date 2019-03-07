@@ -111,15 +111,15 @@ spe.comp<- data.frame(pre_test$Species,species.pred)
 
 spe.comp
    
-###### pre_test.Species   &   species.pred:
-1            setosa       setosa
-2            setosa       setosa
-3            setosa       setosa
-4            setosa       setosa
-5            setosa       setosa
-6            setosa       setosa
-7            setosa       setosa
-8            setosa       setosa
+##### pre_test.Species   &   species.pred:
+   1            setosa       setosa
+   2            setosa       setosa
+   3            setosa       setosa
+   4            setosa       setosa
+   5            setosa       setosa
+   6            setosa       setosa
+   7            setosa       setosa
+   8            setosa       setosa
 9            setosa       setosa
 10           setosa       setosa
 11           setosa       setosa
