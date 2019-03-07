@@ -168,7 +168,7 @@ error.table
        11   0.05555556
 
 
-### This plot shows comparison of Error with K value for choosing correct K to reduce the misclassification 
+### Comparison of Error with K value by plot
 
 ggplot(error.table,aes(kvalue,error))+geom_line(colour="blue")
 
