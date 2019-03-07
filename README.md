@@ -44,7 +44,7 @@ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
 
 $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
 
-### Visualising the "Species" with other variables to identify median relation of the petal and sepal to species using box plot
+### Visualising the "Species" with other variables to identify relation of the petal and sepal to species using box plot
 data.frame(iris)
 
 pl1<- ggplot(iris, aes(Species,Sepal.Length,colour=Species))+geom_boxplot(fill="orange",alpha=0.3)
@@ -56,6 +56,8 @@ pl3<- ggplot(iris, aes(Species,Petal.Length,colour=Species))+geom_boxplot(fill="
 pl4<- ggplot(iris, aes(Species,Petal.Width,colour=Species))+geom_boxplot(fill="darkblue",alpha=0.2)
 
 grid.arrange(pl1,pl2,pl3,pl4,ncol=2)
+
+![species boxplot](https://user-images.githubusercontent.com/43170364/53952423-ad970980-40f6-11e9-894f-c1a41f573921.png)
 
  
 ### Splitting the data set into Train and Test set 
