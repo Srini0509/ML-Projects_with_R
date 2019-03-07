@@ -111,7 +111,7 @@ spe.comp<- data.frame(pre_test$Species,species.pred)
 
 spe.comp
    
-   pre_test.Species      species.pred
+  ###### pre_test.Species   &   species.pred:
 
 1            setosa       setosa
 2            setosa       setosa
@@ -139,7 +139,7 @@ spe.comp
 24       versicolor         versicolor
 25        virginica          virginica
 26        virginica          virginica
-##### 27        virginica         versicolor      
+27        virginica          versicolor (Misclassified data)     
 28        virginica          virginica
 29        virginica          virginica
 30        virginica          virginica
@@ -158,7 +158,7 @@ error.table
 
 error.table
 
-kvalue      error
+##### kvalue   &   error:
        1    0.13888889
        2    0.13888889
        3    0.08333333
@@ -168,7 +168,7 @@ kvalue      error
        7    0.05555556
        8    0.05555556
        9    0.05555556
-#####  10   0.02777778      
+       10   0.02777778      
        11   0.05555556
 
 
